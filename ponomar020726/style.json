@@ -1,0 +1,385 @@
+{
+  "layers": {
+    "посев26_2": {
+      "enabledCategories": [
+        "Жито озиме",
+        "Кукурудза зернова",
+        "Пшениця озима",
+        "Соняшник"
+      ],
+      "centroid": {
+        "mode": "label",
+        "field": "культура 2026"
+      }
+    },
+    "кадастр_3": {
+      "visible": false,
+      "fillBy": {
+        "ТОВ \"АГРОФІРМА \"ПОНОМАР\"": "#0080ff",
+        "ТОВ \"ПОНОМАР\"": "#ffff00"
+      }
+    },
+    "госп_двор_4": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 3
+      },
+      "lineColor": "#00ffff"
+    },
+    "ТОВ_в_контуре_без_дворов_и_дорог_5": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "ТОВ_вне_контура_без_дворов_и_дорог_6": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "АФП_в_контуре_7": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "АФП_вне_контура_8": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "дороги_ТОВ_в_контуре_9": {
+      "visible": false
+    },
+    "дороги_ТОВ_вне_контура_10": {
+      "visible": false
+    },
+    "птахофабрика_в_контуре_11": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "птахофабрика_вне_контура_12": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "Орендодавець-Канівська_м_р_13": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "Орендодавець-Мошнівська_с_р_14": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "Орендодавець-яснозірська_с_р_15": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.75,
+        "width": 1
+      }
+    },
+    "Канівська_м_р_договор_1_в_контуре_16": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      }
+    },
+    "Канівська_м_р_договор_1_вне_контура_17": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      }
+    },
+    "без_права_аренды-в_контуре_18": {
+      "visible": false,
+      "fillColor": "#ff00ff"
+    },
+    "поля_19": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 0.25,
+        "width": 3
+      },
+      "fillBy": {
+        "Межиріч": "#ffffff",
+        "Софіївка": "#ffffff",
+        "Яснозір'я": "#ffffff"
+      },
+      "other": "#ffffff"
+    },
+    "адмін_межа_20": {
+      "visible": false,
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 1,
+        "width": 1
+      },
+      "lineColor": "#ffffff"
+    }
+  },
+  "exchange": {
+    "visible": true,
+    "labelsVisible": false,
+    "groups": {
+      "\"Колосисте Поле\" - Курка": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - вне контур": false,
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - в нашем контуре": false,
+          "передано - в нашем контуре без договора": false,
+          "передано - лес": false,
+          "передано - нет договора": false,
+          "передано - проверено": false
+        }
+      },
+      "Агрофірма  Пономар": {
+        "enabled": false,
+        "subgroups": {
+          "передано - проверено": false
+        }
+      },
+      "Борисенко Віра Григорівна": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Дошка  Руслан  Миколайович": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Дудченко Віталій Вікторович": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - в нашем контуре": false,
+          "передано - в нашем контуре без договора": false,
+          "передано - лес": false
+        }
+      },
+      "Калініченко  С.І.": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Масюк  Подкаура С.": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Масюк (Білик А. О)": {
+        "enabled": false,
+        "subgroups": {
+          "передано - в нашем контуре без договора": false,
+          "передано - нет договора": false
+        }
+      },
+      "Масюк (Верещінський В.О.)": {
+        "enabled": false,
+        "subgroups": {
+          "передано - в нашем контуре без договора": false,
+          "передано - нет договора": false
+        }
+      },
+      "Масюк (Масюк З.А.)": {
+        "enabled": false,
+        "subgroups": {
+          "передано - нет договора": false
+        }
+      },
+      "Масюк (Подкаура С.)": {
+        "enabled": false,
+        "subgroups": {
+          "передано - нет договора": false
+        }
+      },
+      "Масюк Білик АО": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Масюк Верещінський ВО": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - проверено": false
+        }
+      },
+      "Масюк Масюк ЗА": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Масюк Масюк П.В": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Москаленко Руслан Валерійович": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - проверено": false
+        }
+      },
+      "НВК Урожай": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Пуш Григорій Володимирович": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - вне контур": false,
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - нет договора": false,
+          "передано - проверено": false
+        }
+      },
+      "Пуш Лариса Миколаївна": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "СТОВ Хліб-продукт": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - проверено": false
+        }
+      },
+      "Тенетко Валерій Васильович": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - проверено": false,
+          "передано - проверено": false
+        }
+      },
+      "ТОВ Потапцівське": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - вне контур": false,
+          "отримано - проверено": false
+        }
+      },
+      "ФГ Нектар": {
+        "enabled": false,
+        "subgroups": {
+          "передано - лес": false,
+          "передано - проверено": false
+        }
+      },
+      "ФГ Прогрес-ЛС": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - вне контур": false,
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - в нашем контуре": false,
+          "передано - нет договора": false,
+          "передано - нет договора-лес": false,
+          "передано - проверено": false
+        }
+      },
+      "ФГ Рось": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - лес": false,
+          "передано - нет договора": false,
+          "передано - нет договора-лес": false,
+          "передано - проверено": false
+        }
+      },
+      "ФГ Русичі": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - вне контур": false,
+          "отримано - есть зарег. договор аренды": false,
+          "отримано - лес": false,
+          "отримано - проверено": false,
+          "передано - в нашем контуре": false,
+          "передано - лес": false,
+          "передано - нет договора": false,
+          "передано - проверено": false
+        }
+      },
+      "Федченко  Оксана  Володимирівна": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - лес": false,
+          "отримано - проверено": false
+        }
+      },
+      "Чамата Галина Іванівна": {
+        "enabled": false,
+        "subgroups": {
+          "отримано - проверено": false
+        }
+      },
+      "Чамата Олексій Володимирович": {
+        "enabled": false,
+        "subgroups": {
+          "передано - в нашем контуре": false,
+          "передано - проверено": false
+        }
+      }
+    }
+  }
+}

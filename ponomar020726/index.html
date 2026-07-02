@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Полевой атлас</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="toolbar">
+      <button class="brand" type="button" id="brandButton" aria-label="Показать всю карту">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="sprout"></i></span>
+        <span id="appTitle">Полевой атлас</span>
+      </button>
+      <form class="search" id="searchForm" role="search">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="&#1053;&#1072;&#1090;&#1080;&#1089;&#1085;&#1110;&#1090;&#1100; &quot;&#1050;&#1086;&#1087;&#1110;&#1102;&#1074;&#1072;&#1090;&#1080; &#1087;&#1086;&#1089;&#1080;&#1083;&#1072;&#1085;&#1085;&#1103;&quot;">
+        <button class="icon-button" id="searchClear" type="button" aria-label="&#1086;&#1095;&#1080;&#1089;&#1090;&#1080;&#1090;&#1080; &#1087;&#1086;&#1096;&#1091;&#1082;" title="&#1086;&#1095;&#1080;&#1089;&#1090;&#1080;&#1090;&#1080;"><i data-lucide="x"></i></button>
+        <div class="search-results" id="searchResults" hidden></div>
+      </form>
+      <div class="measure-toolbar" aria-label="Измерение">
+        <button class="measure-button" id="measureLength" type="button" aria-pressed="false"><i data-lucide="ruler"></i><span>&#1044;&#1086;&#1074;&#1078;&#1080;&#1085;&#1072;</span></button>
+        <button class="measure-button" id="measureArea" type="button" aria-pressed="false"><i data-lucide="square"></i><span>&#1055;&#1083;&#1086;&#1097;&#1072;</span></button>
+        <button class="icon-button" id="measureClear" type="button" aria-label="Сбросить измерение" title="Сбросить"><i data-lucide="rotate-ccw"></i></button>
+      </div>
+
+    </header>
+    <main class="workspace">
+      <aside class="layers-panel" id="layersPanel" aria-label="&#1064;&#1072;&#1088;&#1080; &#1084;&#1072;&#1087;&#1080;">
+        <div class="panel-heading"><h1>&#1064;&#1072;&#1088;&#1080; &#1084;&#1072;&#1087;&#1080;</h1><button class="icon-button mobile-only" id="closeLayers" type="button" aria-label="&#1047;&#1072;&#1082;&#1088;&#1080;&#1090;&#1080; &#1096;&#1072;&#1088;&#1080;"><i data-lucide="x"></i></button></div>
+        <div class="layer-list" id="layerList"></div>
+        <div class="source-note"><i data-lucide="file-json-2"></i><span>Карта собрана из статической конфигурации</span></div>
+      </aside>
+      <div class="layers-resizer" id="layersResizer" aria-hidden="true"></div>
+      <section class="map-region" aria-label="Карта">
+        <div id="map"></div>
+        <div class="map-message" id="mapMessage" role="status" aria-live="polite"></div>
+        <div class="measure-panel measure-panel-top" id="measurePanel" hidden>
+          <div class="measure-panel-header">
+            <strong id="measureTitle">Измерение</strong>
+            <button class="icon-button" id="measureClose" type="button" aria-label="Закрыть измерение"><i data-lucide="x"></i></button>
+          </div>
+          <div class="measure-panel-body">
+            <p id="measureHint">Выберите режим.</p>
+            <div class="measure-value" id="measureValue">—</div>
+          </div>
+        </div>
+        <button class="author-toggle" id="authorToggle" type="button" aria-label="Режим автора" title="Режим автора">☑️</button>
+        <div class="author-panel" id="authorPanel" hidden>
+          <div class="author-panel-header">
+            <strong>&#1057;&#1090;&#1080;&#1083;&#1100; &#1082;&#1072;&#1088;&#1090;&#1080;</strong>
+            <button class="icon-button" id="authorClose" type="button" aria-label="Закрыть настройки стиля"><i data-lucide="x"></i></button>
+          </div>
+          <div class="author-panel-body">
+            <p>&#1047;&#1084;&#1110;&#1085;&#1080; &#1084;&#1086;&#1078;&#1085;&#1072; &#1079;&#1073;&#1077;&#1088;&#1077;&#1075;&#1090;&#1080; &#1087;&#1088;&#1086;&#1089;&#1090;&#1086; &#1091; &#1087;&#1086;&#1089;&#1080;&#1083;&#1072;&#1085;&#1085;&#1110; &#1082;&#1072;&#1088;&#1090;&#1080;.</p>
+            <label class="style-control"><span>&#1055;&#1086;&#1089;&#1080;&#1083;&#1072;&#1085;&#1085;&#1103; &#1079;&#1110; &#1089;&#1090;&#1080;&#1083;&#1077;&#1084;</span><input id="styleLinkOutput" type="text" readonly placeholder="&#1053;&#1072;&#1090;&#1080;&#1089;&#1085;&#1110;&#1090;&#1100; &quot;&#1050;&#1086;&#1087;&#1110;&#1102;&#1074;&#1072;&#1090;&#1080; &#1087;&#1086;&#1089;&#1080;&#1083;&#1072;&#1085;&#1085;&#1103;&quot;"></label><div class="author-actions">
+              <button class="secondary-button" id="copyStyleLink" type="button"><i data-lucide="link"></i><span>&#1050;&#1086;&#1087;&#1110;&#1102;&#1074;&#1072;&#1090;&#1080; &#1087;&#1086;&#1089;&#1080;&#1083;&#1072;&#1085;&#1085;&#1103;</span></button>
+              <button class="secondary-button" id="resetStyleLink" type="button"><i data-lucide="rotate-ccw"></i><span>&#1057;&#1082;&#1080;&#1085;&#1091;&#1090;&#1080; &#1089;&#1090;&#1080;&#1083;&#1100;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="label-visibility-card" id="labelVisibilityCard" title="Подписи автоматически скрываются на дальнем масштабе">
+          <label class="label-visibility-toggle" for="labelVisibilityToggle">
+            <input id="labelVisibilityToggle" type="checkbox" checked>
+            <span>&#1055;&#1110;&#1076;&#1087;&#1080;&#1089;&#1080;</span>
+          </label>
+        </div>
+                <aside class="exchange-card" id="exchangeCard" hidden>
+          <div class="exchange-card-header">
+            <strong></strong>
+            <button class="panel-toggle" id="toggleExchangePanel" type="button" aria-label="&#1047;&#1075;&#1086;&#1088;&#1085;&#1091;&#1090;&#1080; &#1072;&#1073;&#1086; &#1088;&#1086;&#1079;&#1075;&#1086;&#1088;&#1085;&#1091;&#1090;&#1080; &#1086;&#1073;&#1084;&#1110;&#1085;&#1080;"><span id="toggleExchangePanelText">-</span></button>
+          </div>
+          <div class="exchange-card-body" id="exchangeCardBody">
+            <input class="exchange-search-input" id="exchangeSearchInput" type="search" autocomplete="off" placeholder="">
+            <label class="exchange-toggle"><input id="exchangeLabelsToggle" type="checkbox"><span></span></label>
+            <label class="exchange-toggle exchange-toggle-muted"><input id="exchangeHideAllToggle" type="checkbox"><span></span></label>
+            <div class="exchange-legend" id="exchangeLegend"></div>
+          </div>
+        </aside>
+        <div class="scale-card" id="scaleCard">Масштаб</div>
+      </section>
+      <aside class="inspector" id="inspector" aria-label="Сведения об участке">
+        <div class="panel-heading"><h2>Выбранный объект</h2><button class="icon-button" id="closeInspector" type="button" aria-label="Закрыть карточку"><i data-lucide="x"></i></button></div>
+        <div class="empty-state" id="emptyInspector"><i data-lucide="mouse-pointer-2"></i><p>Выберите участок на карте</p></div>
+        <div class="feature-details" id="featureDetails" hidden>
+          <span class="feature-kind" id="featureKind"></span>
+          <dl id="featureFields"></dl>
+          <div class="inspector-actions">
+            <button class="secondary-button" id="copyCadastre" type="button"><i data-lucide="copy"></i><span>Копировать атрибут поиска</span></button>
+            <button class="secondary-button" id="downloadFeature" type="button"><i data-lucide="download"></i><span>Скачать GeoJSON</span></button>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="statusbar">
+      <span id="coordinates"><i data-lucide="crosshair"></i> Координаты: —</span>
+      <span id="zoomStatus">Масштаб: —</span>
+    </footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/pmtiles@3.0.3/dist/pmtiles.js"></script>
+  <script src="https://unpkg.com/lucide@1.21.0/dist/umd/lucide.min.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
