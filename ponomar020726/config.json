@@ -1,0 +1,780 @@
+{
+  "app": {
+    "title": "поля26"
+  },
+  "map": {
+    "zoom": 13.5,
+    "minZoom": 3,
+    "maxZoom": 19,
+    "fitPadding": 48,
+    "center": [
+      31.5,
+      49.5
+    ]
+  },
+  "basemaps": [
+    {
+      "id": "google_hybrid",
+      "label": "Google Hybrid",
+      "type": "raster",
+      "tiles": [
+        "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "attribution": "Google",
+      "visible": true,
+      "hidden": true
+    }
+  ],
+  "layers": [
+    {
+      "id": "точки_интереса",
+      "label": "точки интереса",
+      "kind": "Point",
+      "format": "geojson",
+      "data": "data/точки_интереса.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "имя"
+      ],
+      "defaultSearchField": "имя",
+      "style": {
+        "fillColor": "#ffffff",
+        "fillOpacity": 1,
+        "lineColor": "#ffffff",
+        "lineWidth": 0.2,
+        "selectedColor": "#00a88f",
+        "pointColor": "#ffffff",
+        "pointStrokeColor": "#ffffff",
+        "pointRadius": 6,
+        "pointStrokeWidth": 1.25
+      },
+      "fields": [
+        {
+          "key": "имя",
+          "label": "имя",
+          "type": "string"
+        }
+      ],
+      "pointLabel": {
+        "field": "имя",
+        "visible": true,
+        "minZoom": 14
+      }
+    },
+    {
+      "id": "поля_2",
+      "label": "🟠поля",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/поля_2.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "розташування",
+        "поле"
+      ],
+      "defaultSearchField": "розташування",
+      "style": {
+        "fillColor": "#d9a441",
+        "fillOpacity": 0.5,
+        "lineColor": "#d9a441",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f",
+        "other": {
+          "label": "Остальные",
+          "lineColor": "#4b5563",
+          "lineOpacity": 0.35,
+          "lineWidth": 0.7
+        },
+        "fillBy": {
+          "property": "розташування",
+          "fallback": "#9aa3ad",
+          "values": {
+            "Межиріч": "#75e89f",
+            "Софіївка": "#1d35cb",
+            "Яснозір'я": "#ccb418"
+          }
+        },
+        "lineBy": {
+          "property": "розташування",
+          "fallback": "#9aa3ad",
+          "values": {
+            "Межиріч": "#54a672",
+            "Софіївка": "#152691",
+            "Яснозір'я": "#928111"
+          }
+        }
+      },
+      "fields": [
+        {
+          "key": "розташування",
+          "label": "розташування",
+          "type": "string"
+        },
+        {
+          "key": "поле",
+          "label": "поле",
+          "type": "string"
+        },
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "посев26_3",
+      "label": "🟠посев26",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/посев26_3.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "група",
+        "номер поля",
+        "культура 2026"
+      ],
+      "defaultSearchField": "група",
+      "style": {
+        "fillColor": "#4f80e1",
+        "fillOpacity": 0.5,
+        "lineColor": "#4f80e1",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f",
+        "other": {
+          "label": "Остальные",
+          "lineColor": "#4b5563",
+          "lineOpacity": 0.35,
+          "lineWidth": 0.7
+        },
+        "fillBy": {
+          "property": "культура 2026",
+          "fallback": "#9aa3ad",
+          "values": {
+            "Жито озиме": "#1fe180",
+            "Кукурудза зернова": "#bee855",
+            "Пшениця озима": "#e2857c",
+            "Соняшник": "#1756ea"
+          }
+        },
+        "lineBy": {
+          "property": "культура 2026",
+          "fallback": "#9aa3ad",
+          "values": {
+            "Жито озиме": "#000000",
+            "Кукурудза зернова": "#000000",
+            "Пшениця озима": "#000000",
+            "Соняшник": "#000000"
+          }
+        }
+      },
+      "fields": [
+        {
+          "key": "група",
+          "label": "група",
+          "type": "string"
+        },
+        {
+          "key": "номер поля",
+          "label": "номер поля",
+          "type": "string"
+        },
+        {
+          "key": "культура 2026",
+          "label": "культура 2026",
+          "type": "string"
+        },
+        {
+          "key": "Площа",
+          "label": "Площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "Площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "кадастр_4",
+      "label": "🟠кадастр",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/кадастр_4.geojson",
+      "visible": true,
+      "interactive": true,
+      "searchFields": [
+        "кадастр",
+        "орендар",
+        "орендодавець",
+        "початок",
+        "закінчення",
+        "примітка",
+        "сільрада",
+        "викристання проверил Р.М."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#b783e6",
+        "fillOpacity": 0.5,
+        "lineColor": "#b783e6",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f",
+        "other": {
+          "label": "Остальные",
+          "lineColor": "#4b5563",
+          "lineOpacity": 0.35,
+          "lineWidth": 0.7
+        },
+        "fillBy": {
+          "property": "орендар",
+          "fallback": "#9aa3ad",
+          "values": {
+            "ТОВ \"АГРОФІРМА \"ПОНОМАР\"": "#c525da",
+            "ТОВ \"ПОНОМАР\"": "#5deddc"
+          }
+        },
+        "lineBy": {
+          "property": "орендар",
+          "fallback": "#9aa3ad",
+          "values": {
+            "ТОВ \"АГРОФІРМА \"ПОНОМАР\"": "#232323",
+            "ТОВ \"ПОНОМАР\"": "#232323"
+          }
+        }
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "орендар",
+          "label": "орендар",
+          "type": "string"
+        },
+        {
+          "key": "орендодавець",
+          "label": "орендодавець",
+          "type": "string"
+        },
+        {
+          "key": "початок",
+          "label": "початок",
+          "type": "date"
+        },
+        {
+          "key": "закінчення",
+          "label": "закінчення",
+          "type": "date"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        },
+        {
+          "key": "сільрада",
+          "label": "сільрада",
+          "type": "string"
+        },
+        {
+          "key": "викристання проверил Р.М.",
+          "label": "викристання проверил Р.М.",
+          "type": "string"
+        },
+        {
+          "key": "в контуре поля га",
+          "label": "в контуре поля га",
+          "type": "number"
+        },
+        {
+          "key": "полоща оренди зареєстрована",
+          "label": "полоща оренди зареєстрована",
+          "type": "number"
+        },
+        {
+          "key": "площа перевірено Р.М.",
+          "label": "площа перевірено Р.М.",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "госп_двор_5",
+      "label": "госп двор",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/госп_двор_5.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#d85f5f",
+        "fillOpacity": 0.5,
+        "lineColor": "#d85f5f",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "ТОВ_в_контуре_без_дворов_и_дорог_6",
+      "label": "🟠ТОВ в контуре(без дворов и дорог)",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_в_контуре_без_дворов_и_дорог_6.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#00ff30",
+        "fillOpacity": 0.5,
+        "lineColor": "#009f25",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "ТОВ_вне_контура_без_дворов_и_дорог_7",
+      "label": "🟠ТОВ вне контура(без дворов и дорог)",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_вне_контура_без_дворов_и_дорог_7.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff5400",
+        "fillOpacity": 0.5,
+        "lineColor": "#8a0000",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "АФП_в_контуре_8",
+      "label": "🟠АФП в контуре",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/АФП_в_контуре_8.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#00ff30",
+        "fillOpacity": 0.5,
+        "lineColor": "#009f25",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "АФП_вне_контура_9",
+      "label": "🟠АФП вне контура",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/АФП_вне_контура_9.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff5400",
+        "fillOpacity": 0.5,
+        "lineColor": "#8a0000",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "дороги_ТОВ_в_контуре_10",
+      "label": "🟠дороги ТОВ в контуре",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/дороги_ТОВ_в_контуре_10.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#00ff30",
+        "fillOpacity": 0.5,
+        "lineColor": "#00ff3b",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "дороги_ТОВ_вне_контура_11",
+      "label": "🟠дороги ТОВ вне контура",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/дороги_ТОВ_вне_контура_11.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff5400",
+        "fillOpacity": 0.5,
+        "lineColor": "#ff0000",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "птахофабрика_в_контуре_12",
+      "label": "🟠птахофабрика в контуре",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/птахофабрика_в_контуре_12.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#00ff30",
+        "fillOpacity": 0.5,
+        "lineColor": "#009f25",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "птахофабрика_вне_контура_13",
+      "label": "🟠птахофабрика вне контура",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/птахофабрика_вне_контура_13.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff5400",
+        "fillOpacity": 0.5,
+        "lineColor": "#8a0000",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "Орендодавець-Канівська_м_р_14",
+      "label": "🟠Орендодавець-Канівська м.р.",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/Орендодавець-Канівська_м_р_14.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#c81ae4",
+        "fillOpacity": 0.5,
+        "lineColor": "#800e10",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "Орендодавець-Мошнівська_с_р_15",
+      "label": "🟠Орендодавець-Мошнівська с.р.",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/Орендодавець-Мошнівська_с_р_15.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#c81ae4",
+        "fillOpacity": 0.5,
+        "lineColor": "#800e10",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        },
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "Орендодавець-яснозірська_с_р_16",
+      "label": "🟠Орендодавець-яснозірська с.р.",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/Орендодавець-яснозірська_с_р_16.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#c81ae4",
+        "fillOpacity": 0.5,
+        "lineColor": "#800e10",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "без_права_аренды-в_контуре_17",
+      "label": "🟠без права аренды-в контуре",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/без_права_аренды-в_контуре_17.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#2c00ff",
+        "fillOpacity": 0.5,
+        "lineColor": "#ff0000",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "площа",
+          "label": "площа",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "площа",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "адмін_межа_18",
+      "label": "адмін межа",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/адмін_межа_18.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "межа"
+      ],
+      "defaultSearchField": "межа",
+      "style": {
+        "fillColor": "#4f80e1",
+        "fillOpacity": 0.5,
+        "lineColor": "#4f80e1",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "межа",
+          "label": "межа",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "обмены_280626_19",
+      "label": "обмены 280626",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/обмены_280626_19.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "контрагент",
+        "тип обмена",
+        "статус"
+      ],
+      "defaultSearchField": "контрагент",
+      "style": {
+        "fillColor": "#b783e6",
+        "fillOpacity": 0.5,
+        "lineColor": "#b783e6",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "контрагент",
+          "label": "контрагент",
+          "type": "string"
+        },
+        {
+          "key": "тип обмена",
+          "label": "тип обмена",
+          "type": "string"
+        },
+        {
+          "key": "статус",
+          "label": "статус",
+          "type": "string"
+        }
+      ],
+      "exchange": {
+        "borderField": "контрагент",
+        "patternField": "статус"
+      }
+    }
+  ]
+}
