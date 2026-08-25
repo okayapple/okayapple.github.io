@@ -1,0 +1,184 @@
+{
+  "app": {
+    "title": "🌲"
+  },
+  "map": {
+    "zoom": 13.5,
+    "minZoom": 3,
+    "maxZoom": 19,
+    "fitPadding": 48,
+    "center": [
+      31.5,
+      49.5
+    ]
+  },
+  "basemaps": [
+    {
+      "id": "google_hybrid",
+      "label": "Google Hybrid",
+      "type": "raster",
+      "tiles": [
+        "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "attribution": "Google",
+      "visible": true,
+      "hidden": true
+    }
+  ],
+  "layers": [
+    {
+      "id": "поля",
+      "label": "⭐поля",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/поля.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "група",
+        "номер поля",
+        "алерт",
+        "культура 2026"
+      ],
+      "defaultSearchField": "група",
+      "style": {
+        "fillColor": "#67a65f",
+        "fillOpacity": 0.5,
+        "lineColor": "#67a65f",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "група",
+          "label": "група",
+          "type": "string"
+        },
+        {
+          "key": "номер поля",
+          "label": "номер поля",
+          "type": "string"
+        },
+        {
+          "key": "алерт",
+          "label": "алерт",
+          "type": "string"
+        },
+        {
+          "key": "культура 2026",
+          "label": "культура 2026",
+          "type": "string"
+        },
+        {
+          "key": "Площа",
+          "label": "Площа",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "лес_2",
+      "label": "🌲лес",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/лес_2.geojson",
+      "visible": true,
+      "interactive": true,
+      "searchFields": [
+        "кадастр",
+        "орендодавець",
+        "дата закінчення",
+        "сільрада",
+        "орендар"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#c43c39",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "орендодавець",
+          "label": "орендодавець",
+          "type": "string"
+        },
+        {
+          "key": "дата закінчення",
+          "label": "дата закінчення",
+          "type": "date"
+        },
+        {
+          "key": "рік закінчення",
+          "label": "рік закінчення",
+          "type": "number"
+        },
+        {
+          "key": "сільрада",
+          "label": "сільрада",
+          "type": "string"
+        },
+        {
+          "key": "орендар",
+          "label": "орендар",
+          "type": "string"
+        },
+        {
+          "key": "📐кадастрова площа",
+          "label": "📐кадастрова площа",
+          "type": "number"
+        },
+        {
+          "key": "🌲заліснення на кадастр",
+          "label": "🌲заліснення на кадастр",
+          "type": "number"
+        }
+      ],
+      "summary": {
+        "field": "🌲заліснення на кадастр",
+        "unit": "ha",
+        "label": "га"
+      }
+    },
+    {
+      "id": "кадастры_зембанк_3",
+      "label": "🏠кадастры зембанк",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/кадастры_зембанк_3.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4f80e1",
+        "fillOpacity": 0.5,
+        "lineColor": "#4f80e1",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "площа перевірено",
+          "label": "площа перевірено",
+          "type": "number"
+        }
+      ]
+    }
+  ]
+}
