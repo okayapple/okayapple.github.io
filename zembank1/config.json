@@ -1,0 +1,434 @@
+{
+  "app": {
+    "title": "."
+  },
+  "map": {
+    "zoom": 13.5,
+    "minZoom": 3,
+    "maxZoom": 19,
+    "fitPadding": 48,
+    "center": [
+      30.7381995,
+      49.5486885
+    ],
+    "bounds": [
+      29.791142,
+      49.4197399,
+      31.685257,
+      49.677637
+    ]
+  },
+  "ui": {
+    "showFeatureCounts": false
+  },
+  "basemaps": [
+    {
+      "id": "google_hybrid",
+      "label": "Google Hybrid",
+      "type": "raster",
+      "tiles": [
+        "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "attribution": "Google",
+      "visible": true,
+      "hidden": true
+    }
+  ],
+  "layers": [
+    {
+      "id": "поля",
+      "label": "⭐поля",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/поля.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "номер поля"
+      ],
+      "defaultSearchField": "номер поля",
+      "style": {
+        "fillColor": "#67a65f",
+        "fillOpacity": 0.5,
+        "lineColor": "#67a65f",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "номер поля",
+          "label": "номер поля",
+          "type": "string"
+        },
+        {
+          "key": "Площа",
+          "label": "Площа",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "ТОВ_АФП_поза_контуром_2",
+      "label": "ТОВ АФП поза контуром",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_АФП_поза_контуром_2.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#91522d",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_АФП_у_контурі_3",
+      "label": "ТОВ АФП у контурі",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_АФП_у_контурі_3.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#e5b636",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_поза_контуром_4",
+      "label": "ТОВ поза контуром",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_поза_контуром_4.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#d5b43c",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_у_контурі_5",
+      "label": "ТОВ у контурі",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_у_контурі_5.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#7d8b8f",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "понятійні_205га_6",
+      "label": "понятійні 205га",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/понятійні_205га_6.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff9e17",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "лес_ТОВ_АФП_7",
+      "label": "🌲лес ТОВ АФП",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/лес_ТОВ_АФП_7.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "орендодавець",
+        "дата закінчення",
+        "сільрада",
+        "орендар"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#ff0500",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "орендодавець",
+          "label": "орендодавець",
+          "type": "string"
+        },
+        {
+          "key": "дата закінчення",
+          "label": "дата закінчення",
+          "type": "date"
+        },
+        {
+          "key": "рік закінчення",
+          "label": "рік закінчення",
+          "type": "number"
+        },
+        {
+          "key": "сільрада",
+          "label": "сільрада",
+          "type": "string"
+        },
+        {
+          "key": "орендар",
+          "label": "орендар",
+          "type": "string"
+        },
+        {
+          "key": "📐кадастрова площа",
+          "label": "📐кадастрова площа",
+          "type": "number"
+        },
+        {
+          "key": "🌲заліснення на кадастр",
+          "label": "🌲заліснення на кадастр",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "невитр_ТОВ_8",
+      "label": "⌛невитр. ТОВ",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/невитр_ТОВ_8.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff9e17",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "птахофабрика_9",
+      "label": "⌛птахофабрика",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/птахофабрика_9.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#987db7",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "К_В_К_10",
+      "label": "⌛К.В.К",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/К_В_К_10.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#987db7",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_будівлі_11",
+      "label": "⌛ТОВ будівлі",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_будівлі_11.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#e77148",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_паї_12",
+      "label": "⌛ТОВ паї",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_паї_12.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#ff9e17",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "ТОВ_дороги_13",
+      "label": "⌛ТОВ дороги",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/ТОВ_дороги_13.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#beb297",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "кадастры_зембанк_26_14",
+      "label": "🟪🏠кадастры зембанк 26",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/кадастры_зембанк_26_14.geojson",
+      "visible": true,
+      "interactive": true,
+      "searchFields": [
+        "кадастр",
+        "орендар",
+        "орендодавець",
+        "назначение",
+        "рилля-сіно",
+        "сільрада"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#b783e6",
+        "fillOpacity": 0.5,
+        "lineColor": "#b783e6",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "орендар",
+          "label": "орендар",
+          "type": "string"
+        },
+        {
+          "key": "орендодавець",
+          "label": "орендодавець",
+          "type": "string"
+        },
+        {
+          "key": "дійсний до",
+          "label": "дійсний до",
+          "type": "number"
+        },
+        {
+          "key": "в контуре га",
+          "label": "в контуре га",
+          "type": "number"
+        },
+        {
+          "key": "лес га",
+          "label": "лес га",
+          "type": "number"
+        },
+        {
+          "key": "назначение",
+          "label": "назначение",
+          "type": "string"
+        },
+        {
+          "key": "рилля-сіно",
+          "label": "рилля-сіно",
+          "type": "string"
+        },
+        {
+          "key": "сільрада",
+          "label": "сільрада",
+          "type": "string"
+        },
+        {
+          "key": "площа перевірено",
+          "label": "площа перевірено",
+          "type": "number"
+        },
+        {
+          "key": "% заліснення",
+          "label": "% заліснення",
+          "type": "number"
+        },
+        {
+          "key": "% у контурі поля",
+          "label": "% у контурі поля",
+          "type": "number"
+        }
+      ]
+    }
+  ]
+}

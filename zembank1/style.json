@@ -1,0 +1,121 @@
+{
+  "layers": {
+    "поля": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 1,
+        "width": 2
+      },
+      "lineColor": "#ffff80"
+    },
+    "ТОВ_АФП_поза_контуром_2": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#ff0000"
+    },
+    "ТОВ_АФП_у_контурі_3": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#00ff00"
+    },
+    "ТОВ_поза_контуром_4": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#ff0000"
+    },
+    "ТОВ_у_контурі_5": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#0000ff"
+    },
+    "понятійні_205га_6": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#8000ff"
+    },
+    "лес_ТОВ_АФП_7": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      }
+    },
+    "невитр_ТОВ_8": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#00ffff"
+    },
+    "птахофабрика_9": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#8080ff"
+    },
+    "К_В_К_10": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#c7d65f"
+    },
+    "ТОВ_будівлі_11": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      }
+    },
+    "ТОВ_паї_12": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#00ffff"
+    },
+    "ТОВ_дороги_13": {
+      "renderOptions": {
+        "mode": "fill",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "fillColor": "#0080ff"
+    },
+    "кадастры_зембанк_26_14": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 0.25,
+        "width": 1
+      },
+      "lineColor": "#000000"
+    }
+  },
+  "mapView": {
+    "center": [
+      31.6308492,
+      49.4595921
+    ],
+    "zoom": 16.79
+  }
+}
