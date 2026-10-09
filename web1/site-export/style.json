@@ -1,0 +1,26 @@
+{
+  "layers": {
+    "другие_поля": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 1,
+        "width": 2
+      }
+    },
+    "кадастр_2_13": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 0.25,
+        "width": 1
+      },
+      "lineColor": "#000000"
+    }
+  },
+  "mapView": {
+    "center": [
+      29.2936869,
+      50.2779486
+    ],
+    "zoom": 11.309
+  }
+}

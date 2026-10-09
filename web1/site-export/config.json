@@ -1,0 +1,743 @@
+{
+  "app": {
+    "title": "jl"
+  },
+  "map": {
+    "zoom": 13.5,
+    "minZoom": 3,
+    "maxZoom": 19,
+    "fitPadding": 48,
+    "center": [
+      29.3096084,
+      50.2725758
+    ],
+    "bounds": [
+      28.8867832,
+      50.1217324,
+      29.7324336,
+      50.4234192
+    ]
+  },
+  "ui": {
+    "showFeatureCounts": false
+  },
+  "basemaps": [
+    {
+      "id": "google_hybrid",
+      "label": "Google Hybrid",
+      "type": "raster",
+      "tiles": [
+        "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "attribution": "Google",
+      "visible": true,
+      "hidden": true
+    }
+  ],
+  "layers": [
+    {
+      "id": "другие_поля",
+      "label": "другие поля",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/другие_поля.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [],
+      "defaultSearchField": null,
+      "style": {
+        "fillColor": "#e41a1c",
+        "fillOpacity": 0.5,
+        "lineColor": "#a31314",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": []
+    },
+    {
+      "id": "передано_Болячів_2",
+      "label": "передано_Болячів",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Болячів_2.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Щигліївка_3",
+      "label": "передано_Щигліївка",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Щигліївка_3.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Озера_4",
+      "label": "передано_Озера",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Озера_4.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Кропивня_5",
+      "label": "передано_Кропивня",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Кропивня_5.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Квітневе_6",
+      "label": "передано_Квітневе",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Квітневе_6.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Голубівка_7",
+      "label": "передано_Голубівка",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Голубівка_7.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "передано_Вільня_8",
+      "label": "передано_Вільня",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/передано_Вільня_8.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п."
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4daf4a",
+        "fillOpacity": 0.5,
+        "lineColor": "#388036",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "отримано_понятійний_Петраков_9",
+      "label": "отримано_понятійний Петраков",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/отримано_понятійний_Петраков_9.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п.",
+        "примітка"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#0000ff",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "отримано_невитребовка_закінчення_лютий_2027_полісся_10",
+      "label": "отримано_невитребовка закінчення лютий 2027 полісся",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/отримано_невитребовка_закінчення_лютий_2027_полісся_10.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п.",
+        "примітка"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#0000ff",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "отримано_відмовляється_АСТ_11",
+      "label": "отримано_відмовляється АСТ",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/отримано_відмовляється_АСТ_11.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п.",
+        "примітка"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#0000ff",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "отримано_без_примітки_12",
+      "label": "отримано_без примітки",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/отримано_без_примітки_12.geojson",
+      "visible": true,
+      "interactive": false,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п.",
+        "примітка"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#0000ff",
+        "fillOpacity": 0.5,
+        "lineColor": "#232323",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "Фактична площа, га",
+          "label": "Фактична площа, га",
+          "type": "number"
+        },
+        {
+          "key": "Площа по обміну, га",
+          "label": "Площа по обміну, га",
+          "type": "number"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "кадастр_2_13",
+      "label": "кадастр 2",
+      "kind": "Polygon",
+      "format": "geojson",
+      "data": "data/кадастр_2_13.geojson",
+      "visible": true,
+      "interactive": true,
+      "searchFields": [
+        "кадастр",
+        "район",
+        "н.п.",
+        "статус",
+        "примітка"
+      ],
+      "defaultSearchField": "кадастр",
+      "style": {
+        "fillColor": "#4f80e1",
+        "fillOpacity": 0.5,
+        "lineColor": "#4f80e1",
+        "lineWidth": 1,
+        "selectedColor": "#00a88f"
+      },
+      "fields": [
+        {
+          "key": "кадастр",
+          "label": "кадастр",
+          "type": "string"
+        },
+        {
+          "key": "№",
+          "label": "№",
+          "type": "number"
+        },
+        {
+          "key": "район",
+          "label": "район",
+          "type": "string"
+        },
+        {
+          "key": "н.п.",
+          "label": "н.п.",
+          "type": "string"
+        },
+        {
+          "key": "площа факт",
+          "label": "площа факт",
+          "type": "number"
+        },
+        {
+          "key": "площа обміну",
+          "label": "площа обміну",
+          "type": "number"
+        },
+        {
+          "key": "статус",
+          "label": "статус",
+          "type": "string"
+        },
+        {
+          "key": "примітка",
+          "label": "примітка",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
