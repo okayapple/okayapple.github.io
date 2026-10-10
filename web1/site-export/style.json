@@ -1,0 +1,149 @@
+{
+  "layers": {
+    "поля": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 1,
+        "width": 2
+      },
+      "lineColor": "#ffff00"
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Болячів_50_46_2": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Щигліївка_54_81_3": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Озера_22_66_4": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Квітневе_35_44_5": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Кропивня-голубіївка_17_22_6": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Кропивня_38_90_7": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "ПЕРЕДАНО_АСТ_до_АПФ_Вільня_423_91_8": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "отримано_понятійний_Петраков_30_065_9": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "отримано_невитр_закінч_лютий_2027_полісся_17_9_10": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "fillColor": "#ff8000",
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "отримано_відмовляється_АСТ_98_55_11": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "отримано_без_примітки_581_458_12": {
+      "renderOptions": {
+        "mode": "both",
+        "opacity": 1,
+        "width": 1
+      },
+      "centroid": {
+        "mode": "label",
+        "field": "№"
+      }
+    },
+    "кадастр_2_13": {
+      "renderOptions": {
+        "mode": "line",
+        "opacity": 0.25,
+        "width": 1
+      },
+      "lineColor": "#000000"
+    }
+  },
+  "mapView": {
+    "center": [
+      29.322855,
+      50.2549069
+    ],
+    "zoom": 12.006
+  }
+}
